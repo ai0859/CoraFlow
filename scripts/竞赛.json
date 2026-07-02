@@ -1,0 +1,897 @@
+{
+  "id": "workflow_1778953879448",
+  "name": "越野-新1",
+  "description": "由工作流编辑器生成",
+  "author": "GameAutomation",
+  "version": "1.0",
+  "nodes": [
+    {
+      "id": "node_1",
+      "type": "start",
+      "position": {
+        "x": -60,
+        "y": -210
+      },
+      "data": {
+        "name": "开始",
+        "config": {}
+      }
+    },
+    {
+      "id": "node_3",
+      "type": "loop",
+      "position": {
+        "x": -60,
+        "y": -120
+      },
+      "data": {
+        "name": "循环",
+        "config": {
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_4",
+      "type": "set_window_size",
+      "position": {
+        "x": 150,
+        "y": -210
+      },
+      "data": {
+        "name": "设置窗口",
+        "config": {
+          "width": 963,
+          "height": 581,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_5",
+      "type": "delay",
+      "position": {
+        "x": 150,
+        "y": -120
+      },
+      "data": {
+        "name": "延时",
+        "config": {
+          "ms": 1000,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_6",
+      "type": "end_loop",
+      "position": {
+        "x": 945,
+        "y": 345
+      },
+      "data": {
+        "name": "结束循环",
+        "config": {}
+      }
+    },
+    {
+      "id": "node_7",
+      "type": "recognize_number",
+      "position": {
+        "x": 150,
+        "y": 495
+      },
+      "data": {
+        "name": "识别数字",
+        "config": {
+          "var_a": "A",
+          "operator": "<",
+          "var_b": "C",
+          "threshold": 0.72,
+          "region": [
+            267,
+            256,
+            612,
+            289
+          ],
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_12",
+      "type": "is_image_exist",
+      "position": {
+        "x": 165,
+        "y": 30
+      },
+      "data": {
+        "name": "未选择宠物",
+        "config": {
+          "image": "yy_choose.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            757,
+            108,
+            832,
+            170
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_13",
+      "type": "print",
+      "position": {
+        "x": 390,
+        "y": 30
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "等待宠物选择",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_16",
+      "type": "is_image_exist",
+      "position": {
+        "x": -60,
+        "y": 555
+      },
+      "data": {
+        "name": "发现数字选择",
+        "config": {
+          "image": "yy_shibie.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            134,
+            247,
+            180,
+            368
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_17",
+      "type": "click",
+      "position": {
+        "x": 570,
+        "y": 435
+      },
+      "data": {
+        "name": "点击通过",
+        "config": {
+          "x": 307,
+          "y": 273,
+          "random_x": 5,
+          "random_y": 2,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_18",
+      "type": "click",
+      "position": {
+        "x": 570,
+        "y": 525
+      },
+      "data": {
+        "name": "点击放弃",
+        "config": {
+          "x": 304,
+          "y": 346,
+          "random_x": 5,
+          "random_y": 2,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_21",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 390,
+        "y": 270
+      },
+      "data": {
+        "name": "银币再试一次",
+        "config": {
+          "image": "yy_again.png",
+          "threshold": 0.72,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1,
+          "region": [
+            544,
+            352,
+            581,
+            387
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_25",
+      "type": "print",
+      "position": {
+        "x": 390,
+        "y": 615
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "下一步",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_27",
+      "type": "is_image_exist",
+      "position": {
+        "x": -60,
+        "y": 30
+      },
+      "data": {
+        "name": "是否越野页面",
+        "config": {
+          "image": "yy_qizhi.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            20,
+            2,
+            78,
+            44
+          ]
+        }
+      }
+    },
+    {
+      "id": "group_1",
+      "type": "group",
+      "position": {
+        "x": -105,
+        "y": 255
+      },
+      "data": {
+        "name": "Group",
+        "config": {
+          "width": 879,
+          "height": 430
+        }
+      }
+    },
+    {
+      "id": "group_2",
+      "type": "group",
+      "position": {
+        "x": -90,
+        "y": -225
+      },
+      "data": {
+        "name": "开始循环",
+        "config": {
+          "width": 412,
+          "height": 184,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_28",
+      "type": "print",
+      "position": {
+        "x": -60,
+        "y": 135
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "不在越野中",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_31",
+      "type": "is_image_exist",
+      "position": {
+        "x": -60,
+        "y": 375
+      },
+      "data": {
+        "name": "是否胜利",
+        "config": {
+          "image": "yy_win.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            246,
+            168,
+            350,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_32",
+      "type": "is_image_exist",
+      "position": {
+        "x": -60,
+        "y": 270
+      },
+      "data": {
+        "name": "是否失败",
+        "config": {
+          "image": "yy_fail.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            246,
+            168,
+            350,
+            250
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_33",
+      "type": "print",
+      "position": {
+        "x": 150,
+        "y": 375
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "通过一站",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_34",
+      "type": "print",
+      "position": {
+        "x": 150,
+        "y": 270
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "失败了",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "group_1",
+      "type": "group",
+      "position": {
+        "x": -105,
+        "y": 255
+      },
+      "data": {
+        "name": "Group",
+        "config": {
+          "width": 879,
+          "height": 430
+        }
+      }
+    },
+    {
+      "id": "node_37",
+      "type": "delay",
+      "position": {
+        "x": 600,
+        "y": 270
+      },
+      "data": {
+        "name": "延时",
+        "config": {
+          "ms": 500
+        }
+      }
+    },
+    {
+      "id": "node_42",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 615,
+        "y": 30
+      },
+      "data": {
+        "name": "下一步",
+        "config": {
+          "image": "yy_next.png",
+          "threshold": 0.72,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1,
+          "region": [
+            604,
+            469,
+            644,
+            502
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_43",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 390,
+        "y": 120
+      },
+      "data": {
+        "name": "前进按钮",
+        "config": {
+          "image": "yy_qianjin.png",
+          "threshold": 0.72,
+          "offset": 5,
+          "var": "clicked",
+          "count": -1,
+          "region": [
+            559,
+            480,
+            623,
+            509
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_45",
+      "type": "is_image_exist",
+      "position": {
+        "x": 615,
+        "y": 120
+      },
+      "data": {
+        "name": "金币1W",
+        "config": {
+          "image": "yy_jin1000.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            544,
+            352,
+            581,
+            387
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_46",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 390,
+        "y": 360
+      },
+      "data": {
+        "name": "下一步",
+        "config": {
+          "image": "yy_next.png",
+          "threshold": 0.72,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1,
+          "region": [
+            602,
+            473,
+            639,
+            505
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_47",
+      "type": "is_image_exist",
+      "position": {
+        "x": 375,
+        "y": -225
+      },
+      "data": {
+        "name": "是否通过关卡",
+        "config": {
+          "image": "yy_end_win.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            386,
+            180,
+            559,
+            265
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_48",
+      "type": "print",
+      "position": {
+        "x": 600,
+        "y": -225
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "通过了",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_50",
+      "type": "print",
+      "position": {
+        "x": 375,
+        "y": 525
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "数值不够，点放弃",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "group_3",
+      "type": "group",
+      "position": {
+        "x": -105,
+        "y": 15
+      },
+      "data": {
+        "name": "Group",
+        "config": {
+          "width": 899,
+          "height": 187
+        }
+      }
+    },
+    {
+      "id": "node_53",
+      "type": "is_image_exist",
+      "position": {
+        "x": 375,
+        "y": -120
+      },
+      "data": {
+        "name": "判断图片",
+        "config": {
+          "image": "yy_fangqi.png",
+          "threshold": 0.72,
+          "var": "result",
+          "count": -1,
+          "region": [
+            749,
+            309,
+            835,
+            339
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_54",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 600,
+        "y": -120
+      },
+      "data": {
+        "name": "出发",
+        "config": {
+          "image": "yy_chufa.png",
+          "threshold": 0.72,
+          "offset": 5,
+          "var": "clicked",
+          "count": -1,
+          "region": [
+            559,
+            480,
+            623,
+            509
+          ]
+        }
+      }
+    },
+    {
+      "id": "group_4",
+      "type": "group",
+      "position": {
+        "x": 360,
+        "y": 60
+      },
+      "data": {
+        "name": "Group",
+        "config": {
+          "width": 664,
+          "height": 216
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "source": "node_1",
+      "target": "node_4",
+      "type": "default"
+    },
+    {
+      "id": "edge_2",
+      "source": "node_4",
+      "target": "node_3",
+      "type": "default"
+    },
+    {
+      "id": "edge_3",
+      "source": "node_3",
+      "target": "node_5",
+      "type": "default"
+    },
+    {
+      "id": "edge_12",
+      "source": "node_12",
+      "target": "node_13",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_17",
+      "source": "node_16",
+      "target": "node_7",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_37",
+      "source": "node_25",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_46",
+      "source": "node_31",
+      "target": "node_33",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_48",
+      "source": "node_32",
+      "target": "node_34",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_56",
+      "source": "node_34",
+      "target": "node_21",
+      "type": "default"
+    },
+    {
+      "id": "edge_58",
+      "source": "node_32",
+      "target": "node_31",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_61",
+      "source": "node_21",
+      "target": "node_37",
+      "type": "default"
+    },
+    {
+      "id": "edge_69",
+      "source": "node_27",
+      "target": "node_28",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_73",
+      "source": "node_31",
+      "target": "node_16",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_89",
+      "source": "node_43",
+      "target": "node_45",
+      "type": "default"
+    },
+    {
+      "id": "edge_90",
+      "source": "node_45",
+      "target": "node_42",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_92",
+      "source": "node_45",
+      "target": "node_32",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_97",
+      "source": "node_16",
+      "target": "node_25",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_99",
+      "source": "node_27",
+      "target": "node_12",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_101",
+      "source": "node_28",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_102",
+      "source": "node_37",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_103",
+      "source": "node_42",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_105",
+      "source": "node_17",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_106",
+      "source": "node_18",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_107",
+      "source": "node_33",
+      "target": "node_46",
+      "type": "default"
+    },
+    {
+      "id": "edge_108",
+      "source": "node_46",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_109",
+      "source": "node_5",
+      "target": "node_47",
+      "type": "default"
+    },
+    {
+      "id": "edge_111",
+      "source": "node_47",
+      "target": "node_48",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_112",
+      "source": "node_48",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_113",
+      "source": "node_13",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_114",
+      "source": "node_7",
+      "target": "node_50",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_115",
+      "source": "node_50",
+      "target": "node_18",
+      "type": "default"
+    },
+    {
+      "id": "edge_118",
+      "source": "node_7",
+      "target": "node_17",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_123",
+      "source": "node_12",
+      "target": "node_43",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_125",
+      "source": "node_53",
+      "target": "node_54",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_126",
+      "source": "node_53",
+      "target": "node_27",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_127",
+      "source": "node_54",
+      "target": "node_27",
+      "type": "default"
+    },
+    {
+      "id": "edge_128",
+      "source": "node_47",
+      "target": "node_53",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    }
+  ]
+}

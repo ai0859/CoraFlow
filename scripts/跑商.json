@@ -1,0 +1,619 @@
+{
+  "id": "workflow_1780149610623",
+  "name": "旅人-跑商",
+  "description": "由工作流编辑器生成",
+  "author": "GameAutomation",
+  "version": "1.0",
+  "nodes": [
+    {
+      "id": "node_1",
+      "type": "start",
+      "position": {
+        "x": 105,
+        "y": 105
+      },
+      "data": {
+        "name": "开始",
+        "config": {}
+      }
+    },
+    {
+      "id": "node_3",
+      "type": "set_window_size",
+      "position": {
+        "x": 315,
+        "y": 105
+      },
+      "data": {
+        "name": "设置窗口大小",
+        "config": {
+          "width": 820,
+          "height": 500,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_4",
+      "type": "loop",
+      "position": {
+        "x": 525,
+        "y": 105
+      },
+      "data": {
+        "name": "循环",
+        "config": {
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_5",
+      "type": "end_loop",
+      "position": {
+        "x": 750,
+        "y": 795
+      },
+      "data": {
+        "name": "结束循环",
+        "config": {}
+      }
+    },
+    {
+      "id": "node_6",
+      "type": "delay",
+      "position": {
+        "x": 735,
+        "y": 105
+      },
+      "data": {
+        "name": "延时",
+        "config": {
+          "ms": 1000,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_10",
+      "type": "check_region_change",
+      "position": {
+        "x": 315,
+        "y": 285
+      },
+      "data": {
+        "name": "是否移动",
+        "config": {
+          "region": [
+            28,
+            40,
+            120,
+            136
+          ],
+          "diff_threshold": 0.5,
+          "var": "changed",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_12",
+      "type": "print",
+      "position": {
+        "x": 525,
+        "y": 195
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "移动中"
+        }
+      }
+    },
+    {
+      "id": "node_13",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 120,
+        "y": 540
+      },
+      "data": {
+        "name": "跳过",
+        "config": {
+          "image": "tiaoguo.png",
+          "threshold": 0.8,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_15",
+      "type": "is_image_exist",
+      "position": {
+        "x": 105,
+        "y": 195
+      },
+      "data": {
+        "name": "是否战斗",
+        "config": {
+          "image": "zhandou.png",
+          "threshold": 0.8,
+          "var": "result",
+          "region": [
+            28,
+            40,
+            120,
+            136
+          ],
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_16",
+      "type": "print",
+      "position": {
+        "x": 315,
+        "y": 195
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "战斗中"
+        }
+      }
+    },
+    {
+      "id": "node_26",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 510,
+        "y": 540
+      },
+      "data": {
+        "name": "跳过2",
+        "config": {
+          "image": "tiaoguo2.png",
+          "threshold": 0.8,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_32",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 720,
+        "y": 540
+      },
+      "data": {
+        "name": "X关闭",
+        "config": {
+          "image": "x.png",
+          "threshold": 0.8,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_33",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 120,
+        "y": 450
+      },
+      "data": {
+        "name": "上交",
+        "config": {
+          "image": "ps_16.bmp",
+          "threshold": 0.8,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_34",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 315,
+        "y": 450
+      },
+      "data": {
+        "name": "前往",
+        "config": {
+          "image": "ps_11.bmp",
+          "threshold": 0.8,
+          "offset": 10,
+          "var": "clicked",
+          "count": -1,
+          "region": [
+            655,
+            345,
+            747,
+            372
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_35",
+      "type": "click_if_image_exist",
+      "position": {
+        "x": 510,
+        "y": 450
+      },
+      "data": {
+        "name": "贸易",
+        "config": {
+          "image": "ps_maoyi.png",
+          "threshold": 0.8,
+          "offset": 2,
+          "var": "clicked",
+          "count": -1,
+          "region": [
+            655,
+            345,
+            775,
+            392
+          ]
+        }
+      }
+    },
+    {
+      "id": "group_1",
+      "type": "group",
+      "position": {
+        "x": 90,
+        "y": 90
+      },
+      "data": {
+        "name": "Group",
+        "config": {
+          "width": 825,
+          "height": 275
+        }
+      }
+    },
+    {
+      "id": "node_36",
+      "type": "click_if_color_exist",
+      "position": {
+        "x": 390,
+        "y": 660
+      },
+      "data": {
+        "name": "点击颜色",
+        "config": {
+          "color": "#DA82D7",
+          "offset_x": 2,
+          "offset_y": 2,
+          "region": [
+            594,
+            158,
+            681,
+            171
+          ],
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_37",
+      "type": "delay",
+      "position": {
+        "x": 720,
+        "y": 450
+      },
+      "data": {
+        "name": "延时",
+        "config": {
+          "ms": 1000,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_38",
+      "type": "is_image_exist",
+      "position": {
+        "x": 120,
+        "y": 660
+      },
+      "data": {
+        "name": "判断存在任务图标",
+        "config": {
+          "image": "ps_renwu.png",
+          "threshold": 0.8,
+          "var": "result",
+          "count": -1,
+          "region": [
+            778,
+            101,
+            799,
+            146
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_39",
+      "type": "delay",
+      "position": {
+        "x": 315,
+        "y": 540
+      },
+      "data": {
+        "name": "延时",
+        "config": {
+          "ms": 1000,
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_40",
+      "type": "is_image_exist",
+      "position": {
+        "x": 525,
+        "y": 285
+      },
+      "data": {
+        "name": "判断物品不够",
+        "config": {
+          "image": "ps_red.png",
+          "threshold": 0.8,
+          "var": "result",
+          "count": -1,
+          "region": [
+            291,
+            191,
+            318,
+            208
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_43",
+      "type": "abort",
+      "position": {
+        "x": 735,
+        "y": 195
+      },
+      "data": {
+        "name": "中止",
+        "config": {
+          "message": "物品不够，需手动操作",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "node_44",
+      "type": "is_image_exist",
+      "position": {
+        "x": 735,
+        "y": 285
+      },
+      "data": {
+        "name": "主任务物品不够",
+        "config": {
+          "image": "ps_red2.png",
+          "threshold": 0.8,
+          "var": "result",
+          "count": -1,
+          "region": [
+            533,
+            231,
+            580,
+            273
+          ]
+        }
+      }
+    },
+    {
+      "id": "node_45",
+      "type": "print",
+      "position": {
+        "x": 600,
+        "y": 660
+      },
+      "data": {
+        "name": "打印",
+        "config": {
+          "message": "任务追踪",
+          "count": -1
+        }
+      }
+    },
+    {
+      "id": "group_2",
+      "type": "group",
+      "position": {
+        "x": 90,
+        "y": 420
+      },
+      "data": {
+        "name": "Group",
+        "config": {
+          "width": 818,
+          "height": 196
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "source": "node_1",
+      "target": "node_3",
+      "type": "default"
+    },
+    {
+      "id": "edge_2",
+      "source": "node_3",
+      "target": "node_4",
+      "type": "default"
+    },
+    {
+      "id": "edge_3",
+      "source": "node_4",
+      "target": "node_6",
+      "type": "default"
+    },
+    {
+      "id": "edge_13",
+      "source": "node_10",
+      "target": "node_12",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_35",
+      "source": "node_6",
+      "target": "node_15",
+      "type": "default"
+    },
+    {
+      "id": "edge_36",
+      "source": "node_15",
+      "target": "node_16",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_37",
+      "source": "node_15",
+      "target": "node_10",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_60",
+      "source": "node_26",
+      "target": "node_32",
+      "type": "default"
+    },
+    {
+      "id": "edge_68",
+      "source": "node_34",
+      "target": "node_35",
+      "type": "default"
+    },
+    {
+      "id": "edge_74",
+      "source": "node_37",
+      "target": "node_13",
+      "type": "default"
+    },
+    {
+      "id": "edge_78",
+      "source": "node_38",
+      "target": "node_36",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_80",
+      "source": "node_32",
+      "target": "node_38",
+      "type": "default"
+    },
+    {
+      "id": "edge_82",
+      "source": "node_13",
+      "target": "node_39",
+      "type": "default"
+    },
+    {
+      "id": "edge_83",
+      "source": "node_39",
+      "target": "node_26",
+      "type": "default"
+    },
+    {
+      "id": "edge_85",
+      "source": "node_35",
+      "target": "node_37",
+      "type": "default"
+    },
+    {
+      "id": "edge_86",
+      "source": "node_10",
+      "target": "node_40",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_91",
+      "source": "node_33",
+      "target": "node_34",
+      "type": "default"
+    },
+    {
+      "id": "edge_92",
+      "source": "node_40",
+      "target": "node_43",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_93",
+      "source": "node_38",
+      "target": "node_5",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_94",
+      "source": "node_40",
+      "target": "node_44",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_95",
+      "source": "node_44",
+      "target": "node_43",
+      "type": "condition",
+      "condition": "true",
+      "sourceHandle": "true"
+    },
+    {
+      "id": "edge_96",
+      "source": "node_44",
+      "target": "node_33",
+      "type": "condition",
+      "condition": "false",
+      "sourceHandle": "false"
+    },
+    {
+      "id": "edge_97",
+      "source": "node_45",
+      "target": "node_5",
+      "type": "default"
+    },
+    {
+      "id": "edge_98",
+      "source": "node_36",
+      "target": "node_45",
+      "type": "default"
+    }
+  ]
+}
